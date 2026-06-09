@@ -1,0 +1,2 @@
+syscalls.c.o: \
+ C:/Users/odona/OneDrive/Yara/Thesis/STM32/BMS_HIL_Code_Gen/STM32CubeIDE/Application/User/Core/syscalls.c

@@ -1,0 +1,10 @@
+BMS_MCU_CODE_ca.c.o: \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/coderassumptions/BMS_MCU_CODE_ca.c \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/coderassumptions/BMS_MCU_CODE_ca.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/coderassumptions/BMS_MCU_CODE_ca_preproc.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/coder_assumptions_hwimpl.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/coder_assumptions_shared_enums.h
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/coderassumptions/BMS_MCU_CODE_ca.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/coderassumptions/BMS_MCU_CODE_ca_preproc.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/coder_assumptions_hwimpl.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/coder_assumptions_shared_enums.h:

@@ -1,0 +1,2 @@
+startup_stm32f401retx.s.o: \
+ C:/Users/odona/OneDrive/Yara/Thesis/STM32/BMS_HIL_Code_Gen/STM32CubeIDE/Application/User/Startup/startup_stm32f401retx.s

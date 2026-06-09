@@ -1,0 +1,31 @@
+-IC:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis
+-IC:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils
+-I"C:/Program Files/MATLAB/R2025b/extern/include"
+-I"C:/Program Files/MATLAB/R2025b/simulink/include"
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/src"
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/src/ext_mode/common"
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/ert"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/target/shared/armcortexmbase/scheduler/include"
+-I"C:/Program Files/MATLAB/R2025b/toolbox/target/shared/armcortexmbase/xcp/include"
+-I"C:/Program Files/MATLAB/R2025b/rtw/c/src/ext_mode/serial"
+-IC:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include
+-I"C:/Program Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include"
+-IC:/ProgramData/MATLAB/SupportPackages/R2025b/3P.instrset/cmsis.instrset/CMSIS/Core/Include
+-IC:/ProgramData/MATLAB/SupportPackages/R2025b/3P.instrset/cmsis_dsp.instrset/Include
+-IC:/ProgramData/MATLAB/SupportPackages/R2025b/3P.instrset/cmsis_dsp.instrset/Include/dsp
+-IC:/Users/odona/OneDrive/Yara/Thesis/STM32/BMSPIL/Drivers/STM32F4xx_HAL_Driver/Inc
+-IC:/Users/odona/OneDrive/Yara/Thesis/STM32/BMSPIL/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+-IC:/Users/odona/OneDrive/Yara/Thesis/STM32/BMSPIL/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+-IC:/Users/odona/OneDrive/Yara/Thesis/STM32/BMSPIL/Drivers/CMSIS/Include
+-IC:/Users/odona/OneDrive/Yara/Thesis/STM32/BMSPIL/Core/Inc
+-I../Core/Inc
+-I"C:/Program Files/MATLAB/R2025b/extern/physmod/win64/ex/include"
+-I"C:/Program Files/MATLAB/R2025b/extern/physmod/win64/mc/include"
+-I"C:/Program Files/MATLAB/R2025b/extern/physmod/win64/pd/include"
+-I"C:/Program Files/MATLAB/R2025b/extern/physmod/win64/pm/include"
+-I"C:/Program Files/MATLAB/R2025b/extern/physmod/win64/pm_log/include"
+-I"C:/Program Files/MATLAB/R2025b/extern/physmod/win64/pm_st/include"
+-I"C:/Program Files/MATLAB/R2025b/extern/physmod/win64/ssc_core/include"
+-I"C:/Program Files/MATLAB/R2025b/extern/physmod/win64/ssc_dae/include"
+-I"C:/Program Files/MATLAB/R2025b/extern/physmod/win64/ssc_ds/include"
+-I"C:/Program Files/MATLAB/R2025b/extern/physmod/win64/ssc_sli/include"

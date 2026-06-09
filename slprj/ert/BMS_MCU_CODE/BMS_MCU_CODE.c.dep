@@ -1,0 +1,24 @@
+BMS_MCU_CODE.c.o: \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE.c \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rtwtypes.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rt_nonfinite.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rtwtypes.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE_types.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/maximum_TTkd84nS.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/minimum_ruU8vKTP.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/plook_u32ff_binx.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/intrp2d_fu32fl_pw.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/look1_binlxpw.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE_private.h
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rtwtypes.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rt_nonfinite.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rtwtypes.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE_types.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/maximum_TTkd84nS.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/minimum_ruU8vKTP.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/plook_u32ff_binx.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/intrp2d_fu32fl_pw.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/look1_binlxpw.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE_private.h:
