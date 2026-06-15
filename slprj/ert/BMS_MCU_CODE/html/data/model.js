@@ -1,0 +1,1 @@
+var modelInfo = {model:"BMS_MCU_CODE"};var modelHierarchy=[{model:"BMS_MCU_CODE",relativePath:"_internal.html",parent:"null"},];var AddCode = true;var ProtectedModel = false;

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'BMS_BIL_Wrapper'.
  *
- * Model version                  : 1.26
+ * Model version                  : 1.31
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Jun  9 13:26:22 2026
+ * C/C++ source code generated on : Mon Jun 15 13:06:15 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -94,7 +94,7 @@ typedef struct {
   real32_T Delta;                      /* '<S7>/BMS_States' */
   uint32_T temporalCounter_i1;         /* '<S8>/Chart' */
   uint32_T temporalCounter_i1_n;       /* '<S7>/BMS_States' */
-  uint16_T Output_DSTATE;              /* '<S54>/Output' */
+  uint8_T Output_DSTATE;               /* '<S54>/Output' */
   uint8_T is_active_c1_BMS_BIL_Wrapper;/* '<Root>/Test Sequence' */
   uint8_T is_c1_BMS_BIL_Wrapper;       /* '<Root>/Test Sequence' */
   uint8_T is_active_c8_BMS_BIL_Wrapper;/* '<S8>/Chart' */
@@ -209,7 +209,7 @@ extern volatile boolean_T runModel;
  * Block '<S5>/Display' : Unused code path elimination
  * Block '<S5>/Display1' : Unused code path elimination
  * Block '<S1>/Scope7' : Unused code path elimination
- * Block '<S54>/FixPt Data Type Propagation' : Unused code path elimination
+ * Block '<S54>/Data Type Propagation' : Unused code path elimination
  * Block '<S56>/FixPt Data Type Duplicate' : Unused code path elimination
  * Block '<S57>/FixPt Data Type Duplicate1' : Unused code path elimination
  * Block '<Root>/To Workspace' : Unused code path elimination
@@ -291,16 +291,16 @@ extern volatile boolean_T runModel;
  * '<S50>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/Compare To Constant1'
  * '<S51>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/Compare To Constant2'
  * '<S52>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/Compare To Constant3'
- * '<S53>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/Digital Port Write'
- * '<S54>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/All_Frames/Counter Free-Running'
+ * '<S53>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/TXEN'
+ * '<S54>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/All_Frames/Counter Limited'
  * '<S55>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/All_Frames/Subsystem'
- * '<S56>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/All_Frames/Counter Free-Running/Increment Real World'
- * '<S57>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/All_Frames/Counter Free-Running/Wrap To Zero'
+ * '<S56>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/All_Frames/Counter Limited/Increment Real World'
+ * '<S57>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/All_Frames/Counter Limited/Wrap To Zero'
  * '<S58>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/All_Frames/Subsystem/Subsystem'
  * '<S59>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/All_Frames/Subsystem/Subsystem/MATLAB Function'
  * '<S60>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/All_Frames/Subsystem/Subsystem/MATLAB Function1'
- * '<S61>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/Digital Port Write/ECSoC'
- * '<S62>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/Digital Port Write/ECSoC/ECSimCodegen'
+ * '<S61>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/TXEN/ECSoC'
+ * '<S62>'  : 'BMS_BIL_Wrapper/Data_Acquisition_From_L99BM114/TXEN/ECSoC/ECSimCodegen'
  * '<S63>'  : 'BMS_BIL_Wrapper/Raw_Data_Conv/Compare To Constant'
  * '<S64>'  : 'BMS_BIL_Wrapper/Raw_Data_Conv/Compare To Constant1'
  * '<S65>'  : 'BMS_BIL_Wrapper/Raw_Data_Conv/Compare To Constant2'

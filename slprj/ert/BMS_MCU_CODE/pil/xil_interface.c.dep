@@ -1,0 +1,26 @@
+xil_interface.c.o: \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/pil/xil_interface.c \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rtwtypes.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rt_nonfinite.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rtwtypes.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE_types.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE_private.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_interface.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_interface_common.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_common.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_interface_lib.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_error_codes.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_data_stream.h
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rtwtypes.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rt_nonfinite.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/_sharedutils/rtwtypes.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE_types.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/slprj/ert/BMS_MCU_CODE/BMS_MCU_CODE_private.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_interface.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_interface_common.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_common.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_interface_lib.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_error_codes.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/rtw/targets/pil/c/xil_data_stream.h:

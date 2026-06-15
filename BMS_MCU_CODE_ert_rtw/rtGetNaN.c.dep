@@ -1,0 +1,8 @@
+rtGetNaN.c.o: \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/BMS_MCU_CODE_ert_rtw/rtGetNaN.c \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/BMS_MCU_CODE_ert_rtw/rtwtypes.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/BMS_MCU_CODE_ert_rtw/rtGetNaN.h \
+ C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/BMS_MCU_CODE_ert_rtw/rt_nonfinite.h
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/BMS_MCU_CODE_ert_rtw/rtwtypes.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/BMS_MCU_CODE_ert_rtw/rtGetNaN.h:
+C:/Users/odona/OneDrive/Yara/Thesis/BMS_Thesis/BMS_MCU_CODE_ert_rtw/rt_nonfinite.h:

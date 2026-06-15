@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'BMS_BIL_Wrapper'.
  *
- * Model version                  : 1.26
+ * Model version                  : 1.31
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Jun  9 13:26:22 2026
+ * C/C++ source code generated on : Mon Jun 15 13:06:15 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -415,11 +415,11 @@ static void BMS_BIL_W_SPIDrvBlock_setupImpl(stm32cube_blocks_SPIControlle_T *obj
   c.txdmaPeripheralPtr = NULL;
   c.txdmastream = 0;
   obj->MW_SPI_BlockStruct.h_spi = NULL;
-  obj->MW_SPI_BlockStruct.gpioPort = NULL;
-  obj->MW_SPI_BlockStruct.gpioPin = 0;
+  obj->MW_SPI_BlockStruct.gpioPort = GPIOB;
   b_dataType = FIFO_ACCESS_8BIT;
 
   /* Start for MATLABSystem: '<Root>/SPI Controller Transfer' */
+  obj->MW_SPI_BlockStruct.gpioPin = 6U;
   obj->MW_SPI_BlockStruct.chipSelectActiveLow = true;
   obj->MW_SPI_BlockStruct.dataType = b_dataType;
   obj->MW_SPI_BlockStruct.dataLength = 1.0;
@@ -457,9 +457,8 @@ void BMS_BIL_Wrapper_step(void)
   int8_T rtb_VectorConcatenate2[8];
   int8_T rtb_VectorConcatenate4[8];
   int8_T rtb_VectorConcatenate6[8];
-  uint8_T rdDataRaw[6];
-  uint8_T wrDataRaw1[6];
   uint8_T rtb_MultiportSwitch[5];
+  uint8_T rtb_SPIControllerTransfer_0[5];
   boolean_T rtb_crc[6];
   boolean_T rtb_crc_1[6];
   boolean_T s;
@@ -1170,7 +1169,7 @@ void BMS_BIL_Wrapper_step(void)
    *  DataTypeConversion: '<S55>/Data Type Conversion1'
    *  UnitDelay: '<S54>/Output'
    */
-  switch ((uint16_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1)) {
+  switch ((uint8_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1)) {
    case 1:
     for (i = 0; i < 5; i++) {
       rtb_MultiportSwitch[i] = BMS_BIL_Wrapper_ConstP.Constant_Value_by[i];
@@ -1531,17 +1530,14 @@ void BMS_BIL_Wrapper_step(void)
   /* End of MultiPortSwitch: '<S48>/Multiport Switch' */
 
   /* MATLABSystem: '<Root>/SPI Controller Transfer' */
-  wrDataRaw1[0] = 0U;
-  for (i = 0; i < 5; i++) {
-    wrDataRaw1[i + 1] = rtb_MultiportSwitch[i];
-  }
-
-  MW_SPI_SetSlaveSelect(BMS_BIL_Wrapper_DW.obj.MW_SPI_HANDLE, 0, true);
   status = MW_STM32_SPI_SetFormat(BMS_BIL_Wrapper_DW.obj.MW_SPI_HANDLE, 0U,
     1792U, MW_SPI_MODE_2);
   if (status == 0) {
+    portNameLoc = GPIOB;
+    LL_GPIO_ResetOutputPin(portNameLoc, 64U);
     MW_SPI_ControllerWriteRead_Databits(BMS_BIL_Wrapper_DW.obj.MW_SPI_HANDLE,
-      &wrDataRaw1[0], &rdDataRaw[0], 0, 6U, 0, 1U);
+      &rtb_MultiportSwitch[0], &rtb_SPIControllerTransfer_0[0], 0, 5U, 0, 1U);
+    LL_GPIO_SetOutputPin(portNameLoc, 64U);
   }
 
   /* Outputs for Enabled SubSystem: '<S3>/Proceed_Cell_Volt' incorporates:
@@ -1555,7 +1551,7 @@ void BMS_BIL_Wrapper_step(void)
    *  RelationalOperator: '<S64>/Compare'
    *  UnitDelay: '<S54>/Output'
    */
-  if (((uint16_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) > 1) && ((uint16_T)
+  if (((uint8_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) > 1) && ((uint8_T)
        (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) <= 15)) {
     /* S-Function (sfix_udelay): '<S71>/Tapped Delay' incorporates:
      *  UnitDelay generated from: '<Root>/Unit Delay'
@@ -1572,9 +1568,10 @@ void BMS_BIL_Wrapper_step(void)
      *  Gain: '<S71>/Gain1'
      *  MATLABSystem: '<Root>/SPI Controller Transfer'
      *  Sum: '<S71>/Sum'
-     * */
-    BMS_BIL_Wrapper_B.CastToSingle2 = (real32_T)((((uint32_T)rdDataRaw[3] << 15)
-      + ((uint32_T)rdDataRaw[4] << 7)) * 3131409116ULL) * 2.22044605E-16F;
+     */
+    BMS_BIL_Wrapper_B.CastToSingle2 = (real32_T)((((uint32_T)
+      rtb_SPIControllerTransfer_0[2] << 15) + ((uint32_T)
+      rtb_SPIControllerTransfer_0[3] << 7)) * 3131409116ULL) * 2.22044605E-16F;
 
     /* Update for S-Function (sfix_udelay): '<S71>/Tapped Delay' */
     for (i = 0; i < 13; i++) {
@@ -1617,10 +1614,10 @@ void BMS_BIL_Wrapper_step(void)
    *  RelationalOperator: '<S79>/Compare'
    *  UnitDelay: '<S54>/Output'
    */
-  if (((uint16_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 7) || ((uint16_T)
-       (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 8) || ((uint16_T)
-       (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 9) || ((uint16_T)
-       (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 10) || ((uint16_T)
+  if (((uint8_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 7) || ((uint8_T)
+       (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 8) || ((uint8_T)
+       (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 9) || ((uint8_T)
+       (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 10) || ((uint8_T)
        (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 13)) {
     /* S-Function (sfix_udelay): '<S73>/Tapped Delay' incorporates:
      *  UnitDelay generated from: '<Root>/Unit Delay'
@@ -1643,10 +1640,12 @@ void BMS_BIL_Wrapper_step(void)
      *  S-Function (sfix_bitop): '<S73>/Bitwise AND'
      *  Sum: '<S73>/Sum'
      *  Sum: '<S73>/Sum1'
-     * */
-    rtb_DiscreteTimeIntegrator5 = (real_T)(((((((uint32_T)rdDataRaw[4] << 15) >>
-      8) + ((uint32_T)rdDataRaw[3] << 15)) + ((uint32_T)floor((real_T)rdDataRaw
-      [5] / 64.0) << 5)) & 65535U) * 3131409116ULL) * 8.8817841970012523E-16;
+     */
+    rtb_DiscreteTimeIntegrator5 = (real_T)(((((((uint32_T)
+      rtb_SPIControllerTransfer_0[3] << 15) >> 8) + ((uint32_T)
+      rtb_SPIControllerTransfer_0[2] << 15)) + ((uint32_T)floor((real_T)
+      rtb_SPIControllerTransfer_0[4] / 64.0) << 5)) & 65535U) * 3131409116ULL) *
+      8.8817841970012523E-16;
 
     /* DataTypeConversion: '<S73>/Cast To Single4' incorporates:
      *  Constant: '<S73>/Constant1'
@@ -1687,22 +1686,23 @@ void BMS_BIL_Wrapper_step(void)
    *  Constant: '<S66>/Constant'
    *  UnitDelay: '<S54>/Output'
    */
-  if ((uint16_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 33) {
+  if ((uint8_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 33) {
     /* DataTypeConversion: '<S69>/Cast To Single5' incorporates:
      *  Gain: '<S69>/Gain2'
      *  Gain: '<S69>/Gain3'
      *  MATLABSystem: '<Root>/SPI Controller Transfer'
      *  Sum: '<S69>/Sum2'
      *  UnitDelay generated from: '<Root>/Unit Delay'
-     * */
-    BMS_BIL_Wrapper_DW.UnitDelay_2_DSTATE = (real32_T)((((uint32_T)rdDataRaw[3] <<
-      15) + ((uint32_T)rdDataRaw[4] << 7)) * 2924700930ULL) * 3.55271368E-15F;
+     */
+    BMS_BIL_Wrapper_DW.UnitDelay_2_DSTATE = (real32_T)((((uint32_T)
+      rtb_SPIControllerTransfer_0[2] << 15) + ((uint32_T)
+      rtb_SPIControllerTransfer_0[3] << 7)) * 2924700930ULL) * 3.55271368E-15F;
 
     /* Product: '<S69>/Divide1' incorporates:
      *  Constant: '<S69>/Constant1'
      *  MATLABSystem: '<Root>/SPI Controller Transfer'
-     * */
-    BMS_BIL_Wrapper_B.V_Sum_LSB = (real_T)rdDataRaw[5] / 64.0;
+     */
+    BMS_BIL_Wrapper_B.V_Sum_LSB = (real_T)rtb_SPIControllerTransfer_0[4] / 64.0;
   }
 
   /* End of RelationalOperator: '<S66>/Compare' */
@@ -1716,7 +1716,7 @@ void BMS_BIL_Wrapper_step(void)
    *  Constant: '<S65>/Constant'
    *  UnitDelay: '<S54>/Output'
    */
-  if ((uint16_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 32) {
+  if ((uint8_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 32) {
     /* DataTypeConversion: '<S70>/Cast To Single1' */
     rtb_DiscreteTimeIntegrator5 = floor(BMS_BIL_Wrapper_B.V_Sum_LSB);
     if (rtIsNaN(rtb_DiscreteTimeIntegrator5) || rtIsInf
@@ -1737,13 +1737,14 @@ void BMS_BIL_Wrapper_step(void)
      *  Sum: '<S70>/Sum'
      *  Sum: '<S70>/Sum1'
      *  UnitDelay generated from: '<Root>/Unit Delay'
-     * */
+     */
     BMS_BIL_Wrapper_DW.UnitDelay_3_DSTATE = (real32_T)((((uint32_T)(uint8_T)
-      ((uint8_T)(rdDataRaw[3] + rdDataRaw[4]) + (uint32_T)floor((real_T)
-      rdDataRaw[5] / 64.0)) << 15) + ((uint32_T)(rtb_DiscreteTimeIntegrator5 <
-      0.0 ? (int32_T)(uint16_T)-(int16_T)(uint16_T)-rtb_DiscreteTimeIntegrator5 :
-      (int32_T)(uint16_T)rtb_DiscreteTimeIntegrator5) << 13)) * 3131409116ULL) *
-      3.46944695E-18F;
+      ((uint8_T)(rtb_SPIControllerTransfer_0[2] + rtb_SPIControllerTransfer_0[3])
+       + (uint32_T)floor((real_T)rtb_SPIControllerTransfer_0[4] / 64.0)) << 15)
+      + ((uint32_T)(rtb_DiscreteTimeIntegrator5 < 0.0 ? (int32_T)(uint16_T)
+                    -(int16_T)(uint16_T)-rtb_DiscreteTimeIntegrator5 : (int32_T)
+                    (uint16_T)rtb_DiscreteTimeIntegrator5) << 13)) *
+      3131409116ULL) * 3.46944695E-18F;
   }
 
   /* End of RelationalOperator: '<S65>/Compare' */
@@ -1757,7 +1758,7 @@ void BMS_BIL_Wrapper_step(void)
    *  Constant: '<S67>/Constant'
    *  UnitDelay: '<S54>/Output'
    */
-  if ((uint16_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 34) {
+  if ((uint8_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) == 34) {
     /* Gain: '<S72>/Gain2' incorporates:
      *  Constant: '<S72>/Constant'
      *  DataTypeConversion: '<S72>/Cast To Single4'
@@ -1767,11 +1768,12 @@ void BMS_BIL_Wrapper_step(void)
      *  MATLABSystem: '<Root>/SPI Controller Transfer'
      *  Product: '<S72>/Divide'
      *  Sum: '<S72>/Sum'
-     * */
+     */
     tmp_0 = 7205759403792793600ULL;
-    tmp_1 = (uint64_T)((int64_T)floor(((real_T)((uint64_T)rdDataRaw[3] << 31) *
-      4.76837158203125E-7 + (real_T)((uint64_T)rdDataRaw[4] << 31) *
-      1.862645149230957E-9) + (real_T)rdDataRaw[5] / 64.0) * 1497446876LL);
+    tmp_1 = (uint64_T)((int64_T)floor(((real_T)((uint64_T)
+      rtb_SPIControllerTransfer_0[2] << 31) * 4.76837158203125E-7 + (real_T)
+      ((uint64_T)rtb_SPIControllerTransfer_0[3] << 31) * 1.862645149230957E-9) +
+      (real_T)rtb_SPIControllerTransfer_0[4] / 64.0) * 1497446876LL);
     sMultiWordMul(&tmp_0, 1, &tmp_1, 1, &tmp.chunks[0U], 2);
 
     /* DataTypeConversion: '<S72>/Cast To Single3' incorporates:
@@ -1801,21 +1803,35 @@ void BMS_BIL_Wrapper_step(void)
    */
   portNameLoc = GPIOB;
   shiftVal = MW_GPIO_BIT_SHIFT;
-  pinWriteLoc = mw_shift((uint32_T)((((uint16_T)
-    (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) <= 1) || ((uint16_T)
-    (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) > 15)) && (((uint16_T)
-    (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) <= 16) || ((uint16_T)
-    (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) > 34))), shiftVal);
-  pinMask = mw_shift(1U, shiftVal);
+  if ((((uint8_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) <= 1) || ((uint8_T)
+        (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) > 15)) && (((uint8_T)
+        (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) <= 16) || ((uint8_T)
+        (BMS_BIL_Wrapper_DW.Output_DSTATE + 1) > 34))) {
+    pinWriteLoc = 32U;
+  } else {
+    pinWriteLoc = 0U;
+  }
+
+  pinWriteLoc = mw_shift(pinWriteLoc, shiftVal);
+  pinMask = mw_shift(32U, shiftVal);
   LL_GPIO_SetOutputPin(portNameLoc, pinWriteLoc);
   LL_GPIO_ResetOutputPin(portNameLoc, ~pinWriteLoc & pinMask);
 
+  /* End of MATLABSystem: '<S62>/Digital Port Write' */
+
   /* Switch: '<S57>/FixPt Switch' incorporates:
    *  Constant: '<S56>/FixPt Constant'
+   *  Constant: '<S57>/Constant'
    *  Sum: '<S56>/FixPt Sum1'
    *  UnitDelay: '<S54>/Output'
    */
-  BMS_BIL_Wrapper_DW.Output_DSTATE++;
+  if ((uint8_T)(BMS_BIL_Wrapper_DW.Output_DSTATE + 1) > 37) {
+    BMS_BIL_Wrapper_DW.Output_DSTATE = 0U;
+  } else {
+    BMS_BIL_Wrapper_DW.Output_DSTATE++;
+  }
+
+  /* End of Switch: '<S57>/FixPt Switch' */
 
   /* MinMax: '<S6>/Max' */
   rtb_DiscreteTimeIntegrator1 = fmaxf(fmaxf(fmaxf(fmaxf(rtb_Tmod[0], rtb_Tmod[1]),
@@ -2129,7 +2145,7 @@ void BMS_BIL_Wrapper_terminate(void)
       uint32_T SPIPinsLoc;
       SPIPinsLoc = MW_UNDEFINED_VALUE;
       MW_SPI_Close(BMS_BIL_Wrapper_DW.obj.MW_SPI_HANDLE, SPIPinsLoc, SPIPinsLoc,
-                   SPIPinsLoc, MW_UNDEFINED_VALUE);
+                   SPIPinsLoc, 6U);
     }
   }
 

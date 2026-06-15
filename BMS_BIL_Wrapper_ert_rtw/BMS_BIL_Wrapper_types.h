@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'BMS_BIL_Wrapper'.
  *
- * Model version                  : 1.26
+ * Model version                  : 1.31
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Jun  9 13:26:22 2026
+ * C/C++ source code generated on : Mon Jun 15 13:06:15 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -107,10 +107,10 @@ typedef struct tag_92DzsjXuaF7c99tFkgTmuB stm32cube_blocks_DigitalPortW_T;
 /* Custom Type definition for MATLABSystem: '<Root>/SPI Controller Transfer' */
 #include "mw_stm32_spi_ll.h"
 #include "mw_stm32_spi_ll.h"
-#ifndef struct_tag_JhEZJVFUWFTNyxxGuprhyG
-#define struct_tag_JhEZJVFUWFTNyxxGuprhyG
+#ifndef struct_tag_IKm6TRZqtpfiV17vKa6x5
+#define struct_tag_IKm6TRZqtpfiV17vKa6x5
 
-struct tag_JhEZJVFUWFTNyxxGuprhyG
+struct tag_IKm6TRZqtpfiV17vKa6x5
 {
   boolean_T matlabCodegenIsDeleted;
   int32_T isInitialized;
@@ -119,12 +119,12 @@ struct tag_JhEZJVFUWFTNyxxGuprhyG
   STM32_SPI_Struct_T MW_SPI_BlockStruct;
 };
 
-#endif                                 /* struct_tag_JhEZJVFUWFTNyxxGuprhyG */
+#endif                                 /* struct_tag_IKm6TRZqtpfiV17vKa6x5 */
 
 #ifndef typedef_stm32cube_blocks_SPIControlle_T
 #define typedef_stm32cube_blocks_SPIControlle_T
 
-typedef struct tag_JhEZJVFUWFTNyxxGuprhyG stm32cube_blocks_SPIControlle_T;
+typedef struct tag_IKm6TRZqtpfiV17vKa6x5 stm32cube_blocks_SPIControlle_T;
 
 #endif                             /* typedef_stm32cube_blocks_SPIControlle_T */
 

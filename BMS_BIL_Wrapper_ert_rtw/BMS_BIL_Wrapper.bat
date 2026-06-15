@@ -1,8 +1,6 @@
 
 cd .
 
-chcp 1252
-
 if "%1"=="" ("C:\PROGRA~1\MATLAB\R2025b\bin\win64\gmake"  -f BMS_BIL_Wrapper.mk all) else ("C:\PROGRA~1\MATLAB\R2025b\bin\win64\gmake"  -f BMS_BIL_Wrapper.mk %1)
 @if errorlevel 1 goto error_exit
 
